@@ -1,0 +1,75 @@
+﻿<Window x:Class="hotel_loby.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hotel_loby"
+        mc:Ignorable="d"
+        Title="OTEL LOBİ UYGULAMASI" Height="552" Width="836.999" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid RenderTransformOrigin="0.654,0.451" Margin="0,0,0,-102">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="224*"/>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="359*"/>
+            <ColumnDefinition Width="126*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="ODA FİLTRELERİ" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+        <Button x:Name="single" Content="1 KİŞİLİK ODALAR" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="198" Height="36" Click="single_Click"/>
+        <Button x:Name="duo" Content="2 KİŞİLİK ODALAR" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" Width="198" Height="36" Click="duo_Click"/>
+        <Button x:Name="tripple" Content="3 KİŞİLİK ODALAR" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="198" Height="35" Click="tripple_Click"/>
+        <Label Content="ODA İŞLEMLERİ" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+        <Button x:Name="exit" Content="ODAYI BOŞALT - ÇIKIŞ YAP" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Width="198" Height="35" Click="exit_Click"/>
+        <Label Content="ODA KİRALAMA" HorizontalAlignment="Left" Margin="10,241,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+        <Button x:Name="keep" Content="ODAYI KİRALA" HorizontalAlignment="Left" Margin="10,468,0,0" VerticalAlignment="Top" Width="198" Height="34" Click="keep_Click"/>
+        <TextBox x:Name="customerName" HorizontalAlignment="Left" Height="28" Margin="10,298,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="198"/>
+        <TextBox x:Name="customerSurname" HorizontalAlignment="Left" Height="29" Margin="10,360,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="198"/>
+        <TextBox x:Name="keepTime" HorizontalAlignment="Left" Height="30" Margin="10,421,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="198"/>
+        <Label Content="Müşteri Adı" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+        <Label Content="Müşteri Soyadı" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+        <Label Content="Kira Süresi" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+        <Grid>
+            <DataGrid Name="roomData" IsReadOnly="True" AutoGenerateColumns="False" Margin="226,2,-584,103" SelectionChanged="roomData_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ODA NUMARASI" Binding="{Binding odaNum}"></DataGridTextColumn>
+                    <DataGridTextColumn Header= "ODA KAPASİTESİ" Binding="{Binding odaCap}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="MÜŞTERİ ADI" Binding="{Binding odaOwnerName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="MÜŞTERİ SOY ADI" Binding="{Binding odaOwnerSurName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="ODA DURUMU" Binding="{Binding odaStatus}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="KİRALAMA SÜRESİ" Binding="{Binding time}"></DataGridTextColumn>
+                </DataGrid.Columns>
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="0" Background="BlanchedAlmond" Padding="10">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="Oda Numarası" VerticalAlignment="Center" />
+                                    <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding odaNum}" VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="Oda Kapasitesi: " VerticalAlignment="Center" />
+                                    <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding odaCap}" VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="Müşteri Adı: " VerticalAlignment="Center" />
+                                    <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding odaOwnerName}" VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="Müşteri Soyadı: " VerticalAlignment="Center" />
+                                    <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding odaOwnerSurName}" VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="Oda DURUMU: " VerticalAlignment="Center" />
+                                    <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding odaStatus}" VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="KİRALAMA SÜRESİ: " VerticalAlignment="Center" />
+                                    <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding time}" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>

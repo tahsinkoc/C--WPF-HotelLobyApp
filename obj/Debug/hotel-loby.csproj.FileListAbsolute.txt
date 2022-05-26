@@ -1,0 +1,15 @@
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\bin\Debug\hotel-loby.exe.config
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\bin\Debug\hotel-loby.exe
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\bin\Debug\hotel-loby.pdb
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\hotel-loby.csproj.AssemblyReference.cache
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\MainWindow.g.cs
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\App.g.cs
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\hotel-loby_MarkupCompile.cache
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\hotel-loby_MarkupCompile.lref
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\MainWindow.baml
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\hotel-loby.g.resources
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\hotel_loby.Properties.Resources.resources
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\hotel-loby.csproj.GenerateResource.cache
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\hotel-loby.csproj.CoreCompileInputs.cache
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\hotel-loby.exe
+C:\Users\tahsi\Desktop\C#-WPF\hotel-loby\obj\Debug\hotel-loby.pdb
