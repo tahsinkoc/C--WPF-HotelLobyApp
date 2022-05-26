@@ -25,4 +25,27 @@ dosyasını çalıştırdığınızda sorunsuz bir şekilde uygulamayı çalış
 
 ## Uygulamanın Kullanımı
 
+Uygulama iki panelden oluşur sol taraftaki panel ile işlemerli yapabilir sağ taraftaki panel ile de odaları görüntüleyebilirsiniz.
+
+Sol taraftaki Oda Filtreleri Bölümünden oda kapasitesine göre görüntüleme yapabilirsiniz.
+
+![Oda Filtresi](/Assets/roomFilter.png)
+
+Biz 2 kişilik odaları görüntülemek üzere <code>2 KİŞİLİK ODALAR</code> butonuna basıyoruz.
+
+![Oda Filtresi](/Assets/filtered.png)
+
+Oda işlemleri bölümünde ise odaları seçmek için sağ taraftaki seçmek istediğimiz odanın satırındaki herhangi bir sütuna tıkladığımızda o odayı seçmiş olur ve dilersek odayı boşaltabilir ya da odayı yine soldaki menüden müşteri bilgilerini girerek kiralayabiliriz
+
+![Oda](/Assets/roomSelect.png)
+
+Örneğin burada 4 numaralı odayı seçtiğimzde oda detaylarının açıldığını ve  sol paneldeki odayı kirala butonunun <code>4 NUMARALI ODAYI KİRALA</code> şeklinde değiştiğini görebiliriz
+
+![Oda](/Assets/renting.png)
+ 
+Sonrasında ise müşteri bilgilerini girip butona tıkladığımızda kolaylıkla odanın kiralandığını görebilirsiniz.
+ 
+![Oda](/Assets/rented.png)
+
+
 
