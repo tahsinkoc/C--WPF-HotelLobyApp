@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using hotel_loby.Model;
 using OtelWDB.Model;
 namespace hotel_loby
 {
@@ -26,7 +27,7 @@ namespace hotel_loby
         }
 
         Otel _odam = new Otel();
-
+        Fatura _atura = new Fatura();
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             roomData.ItemsSource = _odam.Get(4);
@@ -76,16 +77,23 @@ namespace hotel_loby
 
             //keep.Content = $"{ID} NUMARALI ODAYI KİRALA";
         }
+        public int CurId = 0;
 
         private void keep_Click(object sender, RoutedEventArgs e)
         {
             int geciciOda = (roomData.SelectedItem as Otel).odaNum;
             _odam.odaNum = geciciOda;
+            int pph = Convert.ToInt32(keepTime.Text);
+            _atura.id = geciciOda;
+            CurId = geciciOda;
+            _atura.owner = customerName.Text;
+            _atura.price = pph * 1200;
             _odam.odaOwnerName = customerName.Text;
             _odam.odaOwnerSurName = customerSurname.Text;
             _odam.odaStatus = "DOLU";
             _odam.time = keepTime.Text;
 
+            _atura.CreateFatura(geciciOda, customerName.Text, pph * 1200);
             _odam.Save(_odam);
             roomData.ItemsSource = _odam.Get(4);
             roomData.SelectedCells.Clear();
@@ -97,20 +105,26 @@ namespace hotel_loby
             MessageBox.Show($"Oda Başarıyla {_odam.odaOwnerName} Adlı Müşteriye {_odam.time} Günlüğüne Kiralandı");
         }
 
+
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             int geciciOda = (roomData.SelectedItem as Otel).odaNum;
             MessageBox.Show($"{geciciOda.ToString()} Numaralı Oda Başarıyla Boşaltıldı.");
-
+            _atura.ClearFatura(geciciOda);
             _odam.odaNum = geciciOda;
             _odam.odaOwnerName = "BOŞ";
             _odam.odaOwnerSurName = "BOŞ";
             _odam.odaStatus = "BOŞ";
             _odam.time = "BOŞ";
-
             _odam.Save(_odam);
             roomData.ItemsSource = _odam.Get(4);
             roomData.SelectedCells.Clear();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FaturaWin WinFatura = new FaturaWin();
+            WinFatura.Show();
         }
     }
 }

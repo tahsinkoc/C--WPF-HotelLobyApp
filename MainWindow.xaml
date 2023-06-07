@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:hotel_loby"
         mc:Ignorable="d"
-        Title="OTEL LOBİ UYGULAMASI" Height="552" Width="836.999" ResizeMode="NoResize" Loaded="Window_Loaded">
+        Title="OTEL LOBİ UYGULAMASI" Height="600" Width="836.999" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid RenderTransformOrigin="0.654,0.451" Margin="0,0,0,-102">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="224*"/>
@@ -71,5 +71,6 @@
                 </DataGrid.RowDetailsTemplate>
             </DataGrid>
         </Grid>
+        <Button Content="FATURA GÖRÜNTÜLE" HorizontalAlignment="Left" Margin="10,507,0,0" VerticalAlignment="Top" Width="198" Click="Button_Click" Height="35"/>
     </Grid>
 </Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="hotel_loby.FaturaWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hotel_loby"
+        mc:Ignorable="d"
+        Title="FATURANIZ" Height="450" Width="800">
+    <Grid>
+        <Label FontSize="18" Content="Label" Name="FatId" HorizontalAlignment="Left" Margin="29,94,0,0" VerticalAlignment="Top" Height="34" Width="761"/>
+        <Label FontSize="18" Content="Label" Name="FatOwner" HorizontalAlignment="Left" Margin="29,148,0,0" VerticalAlignment="Top" Height="34" Width="761"/>
+        <Label FontSize="18" Content="Label" Name="FatPrice" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Center" Height="34" Width="761"/>
+        <Button Content="FATURAYI GÖRÜNTÜLE" HorizontalAlignment="Left" Margin="214,20,0,0" VerticalAlignment="Top" Height="20" Width="138" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Name="textFrFt" Margin="10,20,0,0" TextWrapping="Wrap" Text="Oda Numarası Giriniz" VerticalAlignment="Top" Width="180" Height="20"/>
+
+    </Grid>
+</Window>
